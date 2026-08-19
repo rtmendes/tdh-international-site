@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part 77 Surface & Obstruction Mapping | TDH International LLC</title>
+<meta name="description" content="Model the imaginary surfaces, flag penetrations, and see what is quietly limiting who can serve your field.">
+<meta name="theme-color" content="#0F1B26">
+<meta property="og:title" content="Part 77 Surface & Obstruction Mapping | TDH International LLC">
+<meta property="og:description" content="Model the imaginary surfaces, flag penetrations, and see what is quietly limiting who can serve your field.">
+<meta property="og:type" content="website">
+<script>(function(){try{var s=localStorage.getItem('tdh-theme');if(!s){s=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',s);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+
+</head>
+<body>
+<header>
+<nav class="nav">
+<a class="brand" href="index.html">
+<svg aria-hidden="true" fill="none" height="34" viewBox="0 0 34 34" width="34" xmlns="http://www.w3.org/2000/svg">
+<rect height="32" rx="2" stroke="currentColor" stroke-width="1.4" width="32" x="1" y="1" opacity=".55"></rect>
+<path d="M6 24 L14 10 L20 18 L28 6" fill="none" stroke="#D65B36" stroke-width="1.7"></path>
+<circle cx="14" cy="10" fill="#F0B14A" r="2"></circle><circle cx="28" cy="6" fill="#F0B14A" r="2"></circle>
+</svg>TDH INTERNATIONAL</a>
+<button class="navburger" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button>
+<div class="navlinks" id="navlinks">
+<div class="nav-drop" data-open="false">
+<button type="button" aria-expanded="false">Airport Services <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></button>
+<div class="nav-menu">
+<div class="nm-head">For airport sponsors</div>
+<a href="airport-gis.html"><strong>All Airport Services</strong><span>The full menu, in one place</span></a>
+<a href="alp-digitization.html"><strong>Airport Layout Plan (ALP) Digitization</strong><span>Turn a paper or CAD ALP into a maintained GIS layer set, so the next update is an edit and not a redraw.</span></a><a href="part-77-obstruction-mapping.html"><strong>Part 77 Surface & Obstruction Mapping</strong><span>Model the imaginary surfaces, flag penetrations, and see what is quietly limiting who can serve your field.</span></a><a href="agis-submittal-support.html"><strong>Airports GIS (AGIS) Survey & Submittal</strong><span>Survey and mapping deliverables to AGIS specification, scheduled backwards from your commissioning date.</span></a><a href="pavement-apron-hangar-inventory.html"><strong>Pavement, Apron & Hangar Inventory</strong><span>One asset layer that answers lease questions, budget questions and grant questions at the same time.</span></a><a href="npias-acip-grant-mapping.html"><strong>NPIAS / ACIP Grant Compliance Mapping</strong><span>Tie capital improvement mapping to NPIAS eligibility and the grant-assurance reporting FAA expects.</span></a><a href="safety-area-rpz-wildlife-mapping.html"><strong>Safety Areas, RPZ & Wildlife Mapping</strong><span>RSA, ROFA and RPZ boundaries mapped against parcel ownership and surrounding land use.</span></a>
+</div></div>
+<div class="nav-drop" data-open="false">
+<button type="button" aria-expanded="false">Other Services <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></button>
+<div class="nav-menu">
+<div class="nm-head">Wider practice</div>
+<a href="grant-administration.html"><strong>Grant & Project Administration</strong><span>Outsourced reporting and compliance for public awards — the discipline behind the airport grant work.</span></a><a href="technical-gis-services.html"><strong>Technical & GIS Services</strong><span>Geospatial analysis, conceptual visualisation, demographics and project-area analysis.</span></a><a href="drone-aerial-survey.html"><strong>Drone & Aerial Survey</strong><span>FAA-certificated drone capture alongside conventional ground survey, matched to the job.</span></a><div class="nm-head">Related entities</div><a href="tdh-electric-works.html"><strong>TDH Electric Works</strong><span>EV charging infrastructure consulting, installation and support.</span></a><a href="monarch-edc.html"><strong>Monarch EDC</strong><span>501(c)(3) aeronautical museum and childrens learning center.</span></a>
+</div></div>
+<a href="timing.html">Why Timing</a>
+<a href="costs.html">What It Costs</a>
+<a href="how-we-work.html">How We Work</a>
+<div class="nav-drop" data-open="false">
+<button type="button" aria-expanded="false">Company <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></button>
+<div class="nav-menu"><div class="nm-head">TDH International</div><a href="experience.html"><strong>Experience</strong><span>Verified engagements, clients and roles.</span></a><a href="resources.html"><strong>Resources</strong><span>Documents and the FAA references we cite.</span></a><a href="about.html"><strong>About & Credentials</strong><span>Team, certifications and procurement reference.</span></a></div></div>
+</div>
+<div class="navtools">
+<button id="theme-toggle" type="button" aria-pressed="false" title="Switch between light and dark">
+<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+<span class="theme-label">Light</span></button>
+<a class="navcta" href="contact.html">Check My ALP Status</a>
+</div>
+</nav>
+</header>
+<main><section class="page-hero"><div class="wrap"><div class="ph-text"><div class="crumb"><a href="index.html">Home</a> / <a href="airport-gis.html">Airport services</a> / Part 77 Surface & Obstruction Mapping</div><h1>Part 77 Surface & Obstruction Mapping</h1><p class="lede">Model the imaginary surfaces, flag penetrations, and see what is quietly limiting who can serve your field.</p></div><div class="ph-anim" aria-hidden="true"><svg viewBox="0 0 260 190" role="presentation" focusable="false"><g class="mo-grid"><line x1="0" y1="0" x2="0" y2="190"/><line x1="26" y1="0" x2="26" y2="190"/><line x1="52" y1="0" x2="52" y2="190"/><line x1="78" y1="0" x2="78" y2="190"/><line x1="104" y1="0" x2="104" y2="190"/><line x1="130" y1="0" x2="130" y2="190"/><line x1="156" y1="0" x2="156" y2="190"/><line x1="182" y1="0" x2="182" y2="190"/><line x1="208" y1="0" x2="208" y2="190"/><line x1="234" y1="0" x2="234" y2="190"/><line x1="260" y1="0" x2="260" y2="190"/><line x1="0" y1="0" x2="260" y2="0"/><line x1="0" y1="26" x2="260" y2="26"/><line x1="0" y1="52" x2="260" y2="52"/><line x1="0" y1="78" x2="260" y2="78"/><line x1="0" y1="104" x2="260" y2="104"/><line x1="0" y1="130" x2="260" y2="130"/><line x1="0" y1="156" x2="260" y2="156"/><line x1="0" y1="182" x2="260" y2="182"/></g>
+<path d="M20 148h220" class="mo-s mo-dim"/>
+<rect x="86" y="142" width="88" height="7" rx="1" class="mo-a" opacity=".55"/>
+<g class="mo-draw" style="--l:520">
+ <path d="M86 145 L26 60 M174 145 L234 60 M26 60 L234 60" class="mo-s"/>
+ <path d="M86 145 L52 96 M174 145 L208 96" class="mo-s" opacity=".6"/></g>
+<g class="mo-fade"><path d="M86 145 L26 60 L234 60 L174 145 Z" class="mo-f"/></g>
+<g class="mo-drop"><path d="M206 148 L206 74" class="mo-s" stroke-width="2.2"/>
+ <circle cx="206" cy="72" r="4" class="mo-a"/><circle cx="206" cy="72" r="4" class="mo-a mo-pulse"/></g>
+<g class="mo-out"><text x="184" y="42" class="mo-t">PENETRATION</text></g>
+<text x="20" y="170" class="mo-td">PART 77 SURFACES</text></svg></div></div></section>
+<section><div class="wrap"><div class="prose">
+<p>Obstructions are the constraint sponsors hear about last and least clearly. A tree line grows. A neighbour builds. A pole goes up outside the fence. Nothing announces itself, and the effect shows up indirectly — in an approach that cannot be lowered, or an operator who quietly stops coming.</p>
+<h2>What this service is</h2>
+<p>We model the 14 CFR Part 77 imaginary surfaces over your airport, identify penetrations, and map the departure paths that matter operationally. The output is a layer you can hand to an engineer, show a board, or use when a neighbouring development lands on the county's desk.</p>
+<h2>A distinction most vendors get wrong</h2>
+<div class="callout">
+<p><strong>One-engine-inoperative (OEI) surfaces are not a sponsor obligation.</strong> OEI obstacle clearance comes from aircraft operator rules under 14 CFR Parts 121 and 135 — it binds the operator, not the airport.</p>
+<p>It still matters to you, because obstacles in a departure path constrain which aircraft can use your field at what weight. But if a consultant tells you that you are <em>required</em> to maintain OEI surfaces, they are overstating the rule — and an airport manager who knows the regulations will notice.</p>
+</div>
+<h2>What you get</h2>
+<ul>
+<li>Part 77 surfaces modelled over current terrain and structures</li>
+<li>A penetration list with location, height and surface affected</li>
+<li>Departure-path analysis showing obstacles that constrain operator performance</li>
+<li>Mapping against parcel ownership, so you know who to talk to about each one</li>
+</ul>
+<h2>When to run this</h2>
+<p>Before a development proposal near the airport, before an approach procedure change, and whenever it has been long enough that vegetation has had time to grow. Obstruction data ages quietly.</p>
+</div><div class="refbar">Ref: <a href='https://www.ecfr.gov/current/title-14/chapter-I/subchapter-E/part-77' target='_blank' rel='noopener'>14 CFR Part 77</a> &middot; <a href='https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_120-91A.pdf' target='_blank' rel='noopener'>AC 120-91A, Airport Obstacle Analysis</a></div>
+<div class="section-cta"><a class="btn-primary" href="contact.html">Check My ALP Status</a><span>Free lookup. One airport identifier is all we need to start.</span></div>
+</div></section></main>
+<footer>
+<div class="wrap">
+<div class="foot-grid">
+<div><h5>TDH International LLC</h5>
+<p style="max-width:32ch;font-size:13.5px;line-height:1.6;">1522 18th St, Suite 314<br>Bakersfield, CA 93301<br>Mailing: PO Box 2493, Bakersfield, CA 93303</p></div>
+<div><h5>Airport services</h5>
+<a href="airport-gis.html">All airport services</a><a href="alp-digitization.html">ALP digitization</a><a href="agis-submittal-support.html">AGIS submittal</a><a href="part-77-obstruction-mapping.html">Part 77 &amp; obstructions</a></div>
+<div><h5>Company</h5>
+<a href="how-we-work.html">How we work</a><a href="experience.html">Experience</a><a href="costs.html">What it costs</a><a href="resources.html">Resources</a><a href="about.html">About &amp; credentials</a><a href="contact.html">Contact</a></div>
+<div><h5>Related entities</h5>
+<a href="tdh-electric-works.html">TDH Electric Works</a><a href="monarch-edc.html">Monarch EDC</a></div>
+</div>
+<div class="cred-band">
+<h5>Registrations &amp; certifications</h5>
+<div class="cred-grid">
+<div class="cred-cell"><span class="cv">SBA Small Business</span><span class="ck">SB/MB #1802153</span></div>
+<div class="cred-cell"><span class="cv">ACDBE / DBE</span><span class="ck">#41593</span></div>
+<div class="cred-cell"><span class="cv">SANDAG BENCH</span><span class="ck">AES</span></div>
+<div class="cred-cell"><span class="cv">Cal eProcure</span><span class="ck">#1802153</span></div>
+<div class="cred-cell"><span class="cv">SAM.gov Registered</span><span class="ck">UN8XP8GYCQN8 &middot; CAGE 6T4Q1</span></div>
+<div class="cred-cell"><span class="cv">FAA Pilot / Drone</span><span class="ck">Aircraft &amp; UAS certificated</span></div>
+</div>
+</div>
+<p class="sources">Regulatory references link to primary sources: <a href="https://www.faa.gov/airports/aip/grant_assurances/assurances-airport-sponsors-2025" rel="noopener" target="_blank">Airport Sponsor Assurances (4/2025)</a>, <a href="https://www.law.cornell.edu/uscode/text/49/47117" rel="noopener" target="_blank">49 U.S.C. &sect; 47117</a>, <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-E/part-77" rel="noopener" target="_blank">14 CFR Part 77</a>, <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-A/part-16" rel="noopener" target="_blank">14 CFR Part 16</a>, <a href="https://www.faa.gov/airports/engineering/engineering_policy_memos/EPM-25-01-Arpt-Geospatial-Survey-Update" rel="noopener" target="_blank">FAA EPM 25-01</a>, <a href="https://www.faa.gov/airports/aip/overview" rel="noopener" target="_blank">FAA AIP Overview</a>. Nothing here is legal advice; confirm applicability to your airport with your FAA ADO.</p>
+<div class="foot-bottom">
+<span>&copy; TDH International LLC. All rights reserved.</span>
+<span>Airport GIS &middot; Land use &middot; Transportation &middot; Grant administration &mdash; Bakersfield, California</span>
+</div>
+</div>
+</footer>
+<script src="assets/site.js"></script>
+<script src="assets/edit.js"></script>
+</body>
+</html>
