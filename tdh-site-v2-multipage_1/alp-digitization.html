@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airport Layout Plan (ALP) Digitization | TDH International LLC</title>
+<meta name="description" content="Turn a paper or CAD ALP into a maintained GIS layer set, so the next update is an edit and not a redraw.">
+<meta name="theme-color" content="#0F1B26">
+<meta property="og:title" content="Airport Layout Plan (ALP) Digitization | TDH International LLC">
+<meta property="og:description" content="Turn a paper or CAD ALP into a maintained GIS layer set, so the next update is an edit and not a redraw.">
+<meta property="og:type" content="website">
+<script>(function(){try{var s=localStorage.getItem('tdh-theme');if(!s){s=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',s);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+
+</head>
+<body>
+<header>
+<nav class="nav">
+<a class="brand" href="index.html">
+<svg aria-hidden="true" fill="none" height="34" viewBox="0 0 34 34" width="34" xmlns="http://www.w3.org/2000/svg">
+<rect height="32" rx="2" stroke="currentColor" stroke-width="1.4" width="32" x="1" y="1" opacity=".55"></rect>
+<path d="M6 24 L14 10 L20 18 L28 6" fill="none" stroke="#D65B36" stroke-width="1.7"></path>
+<circle cx="14" cy="10" fill="#F0B14A" r="2"></circle><circle cx="28" cy="6" fill="#F0B14A" r="2"></circle>
+</svg>TDH INTERNATIONAL</a>
+<button class="navburger" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button>
+<div class="navlinks" id="navlinks">
+<div class="nav-drop" data-open="false">
+<button type="button" aria-expanded="false">Airport Services <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></button>
+<div class="nav-menu">
+<div class="nm-head">For airport sponsors</div>
+<a href="airport-gis.html"><strong>All Airport Services</strong><span>The full menu, in one place</span></a>
+<a href="alp-digitization.html"><strong>Airport Layout Plan (ALP) Digitization</strong><span>Turn a paper or CAD ALP into a maintained GIS layer set, so the next update is an edit and not a redraw.</span></a><a href="part-77-obstruction-mapping.html"><strong>Part 77 Surface & Obstruction Mapping</strong><span>Model the imaginary surfaces, flag penetrations, and see what is quietly limiting who can serve your field.</span></a><a href="agis-submittal-support.html"><strong>Airports GIS (AGIS) Survey & Submittal</strong><span>Survey and mapping deliverables to AGIS specification, scheduled backwards from your commissioning date.</span></a><a href="pavement-apron-hangar-inventory.html"><strong>Pavement, Apron & Hangar Inventory</strong><span>One asset layer that answers lease questions, budget questions and grant questions at the same time.</span></a><a href="npias-acip-grant-mapping.html"><strong>NPIAS / ACIP Grant Compliance Mapping</strong><span>Tie capital improvement mapping to NPIAS eligibility and the grant-assurance reporting FAA expects.</span></a><a href="safety-area-rpz-wildlife-mapping.html"><strong>Safety Areas, RPZ & Wildlife Mapping</strong><span>RSA, ROFA and RPZ boundaries mapped against parcel ownership and surrounding land use.</span></a>
+</div></div>
+<div class="nav-drop" data-open="false">
+<button type="button" aria-expanded="false">Other Services <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></button>
+<div class="nav-menu">
+<div class="nm-head">Wider practice</div>
+<a href="grant-administration.html"><strong>Grant & Project Administration</strong><span>Outsourced reporting and compliance for public awards — the discipline behind the airport grant work.</span></a><a href="technical-gis-services.html"><strong>Technical & GIS Services</strong><span>Geospatial analysis, conceptual visualisation, demographics and project-area analysis.</span></a><a href="drone-aerial-survey.html"><strong>Drone & Aerial Survey</strong><span>FAA-certificated drone capture alongside conventional ground survey, matched to the job.</span></a><div class="nm-head">Related entities</div><a href="tdh-electric-works.html"><strong>TDH Electric Works</strong><span>EV charging infrastructure consulting, installation and support.</span></a><a href="monarch-edc.html"><strong>Monarch EDC</strong><span>501(c)(3) aeronautical museum and childrens learning center.</span></a>
+</div></div>
+<a href="timing.html">Why Timing</a>
+<a href="costs.html">What It Costs</a>
+<a href="how-we-work.html">How We Work</a>
+<div class="nav-drop" data-open="false">
+<button type="button" aria-expanded="false">Company <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></button>
+<div class="nav-menu"><div class="nm-head">TDH International</div><a href="experience.html"><strong>Experience</strong><span>Verified engagements, clients and roles.</span></a><a href="resources.html"><strong>Resources</strong><span>Documents and the FAA references we cite.</span></a><a href="about.html"><strong>About & Credentials</strong><span>Team, certifications and procurement reference.</span></a></div></div>
+</div>
+<div class="navtools">
+<button id="theme-toggle" type="button" aria-pressed="false" title="Switch between light and dark">
+<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+<span class="theme-label">Light</span></button>
+<a class="navcta" href="contact.html">Check My ALP Status</a>
+</div>
+</nav>
+</header>
+<main><section class="page-hero"><div class="wrap"><div class="crumb"><a href="index.html">Home</a> / <a href="airport-gis.html">Airport services</a> / Airport Layout Plan (ALP) Digitization</div><h1>Airport Layout Plan (ALP) Digitization</h1><p class="lede">Turn a paper or CAD ALP into a maintained GIS layer set, so the next update is an edit and not a redraw.</p></div></section>
+<section><div class="wrap"><div class="prose">
+<p>The Airport Layout Plan is the drawing everything else refers back to. Grant applications reference it. FAA reviews development against it. Your own staff use it to answer questions about who leases what. And at a great many small airports it exists as a paper sheet from a decade or more ago, plus a CAD file from an engineer who has since moved on.</p>
+<h2>What this service is</h2>
+<p>We convert legacy paper and CAD-based ALPs into a maintained GIS layer set aligned to current FAA airport design standards. Not a one-off redraw — a structured set of layers with real geometry and attributes behind them, so the next revision is an edit rather than starting over.</p>
+<h2>Why sponsors do this</h2>
+<p>Under Grant Assurance 29, a federally obligated sponsor undertakes to keep a current ALP and not to permit alterations that conflict with the approved plan. Where a nonconforming change adversely affects federally funded property, the sponsor can be asked to put it right at their own expense.</p>
+<p>The practical version is simpler: an out-of-date ALP slows everything down. It delays grant applications, complicates modifications of standards, and turns routine questions into research projects.</p>
+<h2>What you get</h2>
+<ul>
+<li>A georeferenced layer set covering property boundary, runways, taxiways, aprons, buildings and safety areas</li>
+<li>Attribute structure aligned to FAA airport design standards, so the data is usable by other consultants and not just by us</li>
+<li>Source files you own outright — no proprietary lock-in and no licence to keep paying</li>
+<li>A written note of what we could not verify from records, and what a field visit would be needed to confirm</li>
+</ul>
+<h2>How the work runs</h2>
+<p>We begin with records, not survey. Half of what small airports believe is missing turns out to exist somewhere — an old survey, a construction as-built, a consultant's file. We establish what is already there before proposing anything that costs money. Where genuine gaps remain, we scope capture to fill only those gaps, using drone or conventional ground survey depending on the accuracy the feature actually needs.</p>
+</div><div class="refbar">Ref: <a href='https://www.faa.gov/airports/resources/advisory_circulars/index.cfm/go/document.current/documentnumber/150_5300-13' target='_blank' rel='noopener'>AC 150/5300-13B Chg 1, Airport Design</a> &middot; <a href='https://www.faa.gov/airports/aip/grant_assurances/assurances-airport-sponsors-2025' target='_blank' rel='noopener'>Grant Assurance 29</a></div>
+<div class="section-cta"><a class="btn-primary" href="contact.html">Check My ALP Status</a><span>Free lookup. One airport identifier is all we need to start.</span></div>
+</div></section></main>
+<footer>
+<div class="wrap">
+<div class="foot-grid">
+<div><h5>TDH International LLC</h5>
+<p style="max-width:32ch;font-size:13.5px;line-height:1.6;">1522 18th St, Suite 314<br>Bakersfield, CA 93301<br>Mailing: PO Box 2493, Bakersfield, CA 93303</p></div>
+<div><h5>Airport services</h5>
+<a href="airport-gis.html">All airport services</a><a href="alp-digitization.html">ALP digitization</a><a href="agis-submittal-support.html">AGIS submittal</a><a href="part-77-obstruction-mapping.html">Part 77 &amp; obstructions</a></div>
+<div><h5>Company</h5>
+<a href="how-we-work.html">How we work</a><a href="experience.html">Experience</a><a href="costs.html">What it costs</a><a href="resources.html">Resources</a><a href="about.html">About &amp; credentials</a><a href="contact.html">Contact</a></div>
+<div><h5>Related entities</h5>
+<a href="tdh-electric-works.html">TDH Electric Works</a><a href="monarch-edc.html">Monarch EDC</a></div>
+</div>
+<div class="cred-band">
+<h5>Registrations &amp; certifications</h5>
+<div class="cred-grid">
+<div class="cred-cell"><span class="cv">SBA Small Business</span><span class="ck">SB/MB #1802153</span></div>
+<div class="cred-cell"><span class="cv">ACDBE / DBE</span><span class="ck">#41593</span></div>
+<div class="cred-cell"><span class="cv">SANDAG BENCH</span><span class="ck">AES</span></div>
+<div class="cred-cell"><span class="cv">Cal eProcure</span><span class="ck">#1802153</span></div>
+<div class="cred-cell"><span class="cv">SAM.gov Registered</span><span class="ck">UN8XP8GYCQN8 &middot; CAGE 6T4Q1</span></div>
+<div class="cred-cell"><span class="cv">FAA Pilot / Drone</span><span class="ck">Aircraft &amp; UAS certificated</span></div>
+</div>
+</div>
+<p class="sources">Regulatory references link to primary sources: <a href="https://www.faa.gov/airports/aip/grant_assurances/assurances-airport-sponsors-2025" rel="noopener" target="_blank">Airport Sponsor Assurances (4/2025)</a>, <a href="https://www.law.cornell.edu/uscode/text/49/47117" rel="noopener" target="_blank">49 U.S.C. &sect; 47117</a>, <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-E/part-77" rel="noopener" target="_blank">14 CFR Part 77</a>, <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-A/part-16" rel="noopener" target="_blank">14 CFR Part 16</a>, <a href="https://www.faa.gov/airports/engineering/engineering_policy_memos/EPM-25-01-Arpt-Geospatial-Survey-Update" rel="noopener" target="_blank">FAA EPM 25-01</a>, <a href="https://www.faa.gov/airports/aip/overview" rel="noopener" target="_blank">FAA AIP Overview</a>. Nothing here is legal advice; confirm applicability to your airport with your FAA ADO.</p>
+<div class="foot-bottom">
+<span>&copy; TDH International LLC. All rights reserved.</span>
+<span>Airport GIS &middot; Land use &middot; Transportation &middot; Grant administration &mdash; Bakersfield, California</span>
+</div>
+</div>
+</footer>
+<script src="assets/site.js"></script>
+<script src="assets/edit.js"></script>
+</body>
+</html>
